@@ -11,7 +11,6 @@ import java.io.IOException;
 
 public final class CloseUtils {
     private  CloseUtils(){}
-
     public static void closeQuietly(Closeable closeable){
         if(null != closeable){
             try {

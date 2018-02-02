@@ -11,10 +11,9 @@ import java.io.FileOutputStream;
 
 public class DiskCache2 {
 
-    String cacheDir="";
+    String cacheDir="xx";
     public void put(String url,Bitmap bitmap) {
         FileOutputStream fileOut = null;
-
         try {
             fileOut = new FileOutputStream(cacheDir + url);
         } catch (FileNotFoundException e) {
