@@ -4,7 +4,8 @@ package com.ljt.designprinclple.command;
 public class ConcreteCommand implements Command{
 	//持有相应的接受者
 	private Receiver receiver=null;
-	
+
+
 	 public ConcreteCommand(Receiver receiver) {
 		 this.receiver=receiver;
 	}	
