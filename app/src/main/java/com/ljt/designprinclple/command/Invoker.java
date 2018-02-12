@@ -17,4 +17,5 @@ public class Invoker {
 	public void action(){
 		command.execute();
 	}
+
 }
