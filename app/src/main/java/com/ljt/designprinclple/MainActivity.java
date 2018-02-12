@@ -1,7 +1,10 @@
 package com.ljt.designprinclple;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -30,5 +33,25 @@ public class MainActivity extends Activity {
             public void put(String url, Bitmap bmp) {
             }
         });
+    }
+    private void showDialog(Context context){
+        AlertDialog.Builder builder=new AlertDialog.Builder(this);
+        //构建AlertDialog
+        AlertDialog dialog=builder.setTitle("标题")
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setView(R.layout.activity_main)
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                })
+                .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                })
+                .create();
+        // 显示AlertDialog
+        dialog.show();
     }
 }
